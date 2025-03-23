@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      n8n-workflow:
+        specifier: '*'
+        version: 1.48.0
     devDependencies:
       '@typescript-eslint/parser':
         specifier: ^7.15.0
@@ -20,9 +24,6 @@ importers:
       gulp:
         specifier: ^4.0.2
         version: 4.0.2
-      n8n-workflow:
-        specifier: '*'
-        version: 1.48.0
       prettier:
         specifier: ^3.3.2
         version: 3.3.2
@@ -466,8 +467,8 @@ packages:
     resolution: {integrity: sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==}
     engines: {node: '>=0.10.0'}
 
-  decode-uri-component@0.2.0:
-    resolution: {integrity: sha512-hjf+xovcEn31w/EUYdTXQh/8smFL/dzYjohQGEIgjyNavaJfBY2p5F527Bo1VPATxv0VYTUC2bOcXvqFwk78Og==}
+  decode-uri-component@0.2.2:
+    resolution: {integrity: sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==}
     engines: {node: '>=0.10'}
 
   deep-equal@2.2.0:
@@ -578,10 +579,6 @@ packages:
     resolution: {integrity: sha512-dOt21O7lTMhDM+X9mB4GX+DZrZtCUJPL/wlcTqxyrx5IvO0IYtILdtrQGQp+8n5S0gwSVmOf9NQrjMOgfQZlIg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  eslint-visitor-keys@3.3.0:
-    resolution: {integrity: sha512-mQ+suqKJVyeuwGYHAdjMFqjCyfl8+Ldnxuyp3ldiMBFKkvytrXUZWaiPCEav8qDHKty44bD+qV1IP4T+w+xXRA==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-
   eslint-visitor-keys@3.4.3:
     resolution: {integrity: sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -589,6 +586,7 @@ packages:
   eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@9.6.1:
@@ -758,7 +756,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
+    deprecated: Upgrade to fsevents v2 to mitigate potential security issues
 
   function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
@@ -1640,12 +1638,12 @@ packages:
     resolution: {integrity: sha512-Ny/iyOzSSa8M5ML46IAx3iXc6tfOsYU2R4AXi2UpHk60Zrgyq6eqPj/xiOfS0rRl/iiQ/rdJkVjw/5cdUyCntQ==}
     engines: {node: '>= 0.10'}
 
-  semver@5.7.1:
-    resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
+  semver@5.7.2:
+    resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
     hasBin: true
 
-  semver@7.6.2:
-    resolution: {integrity: sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==}
+  semver@7.7.1:
+    resolution: {integrity: sha512-hlq8tAfn0m/61p4BVRcPzIGr6LKiMwo4VM6dGi6pt4qcRkmNzTcWq6eCEjEh+qXjkMDvPlOFFSGwQjoEa6gyMA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -2012,7 +2010,7 @@ snapshots:
   '@eslint-community/eslint-utils@4.4.0(eslint@8.57.0)':
     dependencies:
       eslint: 8.57.0
-      eslint-visitor-keys: 3.3.0
+      eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.11.0': {}
 
@@ -2110,7 +2108,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.3
-      semver: 7.6.2
+      semver: 7.7.1
       ts-api-utils: 1.3.0(typescript@5.5.3)
     optionalDependencies:
       typescript: 5.5.3
@@ -2125,7 +2123,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.6.2
+      semver: 7.7.1
       ts-api-utils: 1.3.0(typescript@5.5.3)
     optionalDependencies:
       typescript: 5.5.3
@@ -2141,7 +2139,7 @@ snapshots:
       '@typescript-eslint/types': 6.21.0
       '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.5.3)
       eslint: 8.57.0
-      semver: 7.6.2
+      semver: 7.7.1
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -2508,7 +2506,7 @@ snapshots:
 
   decamelize@1.2.0: {}
 
-  decode-uri-component@0.2.0: {}
+  decode-uri-component@0.2.2: {}
 
   deep-equal@2.2.0:
     dependencies:
@@ -2663,8 +2661,6 @@ snapshots:
     dependencies:
       esrecurse: 4.3.0
       estraverse: 5.3.0
-
-  eslint-visitor-keys@3.3.0: {}
 
   eslint-visitor-keys@3.4.3: {}
 
@@ -3526,7 +3522,7 @@ snapshots:
     dependencies:
       hosted-git-info: 2.8.9
       resolve: 1.22.1
-      semver: 5.7.1
+      semver: 5.7.2
       validate-npm-package-license: 3.0.4
 
   normalize-path@2.1.1:
@@ -3845,9 +3841,9 @@ snapshots:
     dependencies:
       sver-compat: 1.5.0
 
-  semver@5.7.1: {}
+  semver@5.7.2: {}
 
-  semver@7.6.2: {}
+  semver@7.7.1: {}
 
   sentence-case@3.0.4:
     dependencies:
@@ -3921,7 +3917,7 @@ snapshots:
   source-map-resolve@0.5.3:
     dependencies:
       atob: 2.1.2
-      decode-uri-component: 0.2.0
+      decode-uri-component: 0.2.2
       resolve-url: 0.2.1
       source-map-url: 0.4.1
       urix: 0.1.0
